@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class NumbersfromString {
 	 public static void main(String[] args)
 	    {
-	        Scanner sc = new Scanner(System.in);
-	       String str = sc.nextLine();
-	       // func("Dhoni7 notout at183*runs in 145balls&hit15fours&ten6s!");
-	        List<String> a = func(str);
+	        /*Scanner sc = new Scanner(System.in);
+	       String str = sc.nextLine();*/
+	       List<String> a=  func("Dhoni7 notout at183*runs in 145balls&hit15fours&ten6s!");
+	        //List<String> a = func(str);
 	        
 	       for(String  x : a) {
 	            System.out.println(x);
