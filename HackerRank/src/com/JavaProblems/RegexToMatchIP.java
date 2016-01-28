@@ -1,5 +1,4 @@
-package com.New;
-
+package com.JavaProblems;
 import java.util.Scanner;
 
 public class RegexToMatchIP {
