@@ -11,7 +11,7 @@ public class BigDecimal {
         int testCase = sc.nextInt();
 
         while(testCase-- > 0)
-            list.add(new BigDecimal(sc.nextBigDecimal()));
+//         list.add(new BigDecimal(sc.nextBigDecimal()));
 
         System.out.println(list); //ascending order
         System.out.println(list.descendingSet()); //descending order
