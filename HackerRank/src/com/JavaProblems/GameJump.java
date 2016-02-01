@@ -7,7 +7,8 @@ public class GameJump {
 	public static int[] A;
 	public static	int m;
 	public static int n;
-	public static int[] visitedArray;
+	public static boolean[] visitedArray;
+	private static boolean result=false;
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
 		int T = sc.nextInt();
@@ -15,8 +16,8 @@ public class GameJump {
 
 			n = sc.nextInt();
 			A= new int[n];
-			visitedArray= new int[n];
-			Arrays.fill(visitedArray,0);
+			visitedArray= new boolean[n];
+			Arrays.fill(visitedArray,false);
 			m = sc.nextInt();
 			for (int n_i = 0; n_i < n; n_i++) {
 				A[n_i]= sc.nextInt();
@@ -25,35 +26,39 @@ public class GameJump {
 			//System.out.println("going");
 			int temp =0;
 			//System.out.println(temp);
-			isPossible(temp);	
+			result=false;
+			isPossible(temp);
+			if(result) System.out.println("YES");
+			else System.out.println("NO");
 		}
 
 	}
 	private static void isPossible( int i) {
-		System.out.println("i : "+i + " Array visited : "+ Arrays.toString(visitedArray));
-		//if(visitedArray[i] != true){
-		System.out.println("hey true");
-		System.out.println("called for i: "+i);
-			visitedArray[i]++;
+		//System.out.println("i : "+i + " Array visited : "+ Arrays.toString(visitedArray));
+
+		//System.out.println(i);
 		if(i>n || i+m >= n || i==n-1){
-				System.out.println("YES");
-				return; 
-		}else {
-			System.out.println("checker: "+ (i+m < n) + " "+ (A[i+m]==0)+" "+ (visitedArray[i+m]<3));
-			System.out.println("Pa: "+ (i+m)+" "+ A[i+m] +" "+ A[i+m+1]+" "+ A[i+m-1]);
-			if (A[i+1]==0 && visitedArray[i+1] <3){
-				System.out.println("here" +(i+1));
-				isPossible(i+1);			
-			}else if (i-1>0 && A[i-1]==0 && visitedArray[i-1] <3){
-				System.out.println("here1");
-				isPossible(i-1);
-			}else if(i+m < n && A[i+m]==0 && visitedArray[i+m]<3){
-				System.out.println("here2");
-				isPossible(i+m);
-			}else{
-				System.out.println("NO");
-				return;
-			}
-			}
+			result =true;
+			return; 
+		}
+		if(visitedArray[i] == true){
+			//System.out.println("visited true " +i);
+			return;
+		}
+		visitedArray[i]= true;
+
+		
+		if (i+1 < n && A[i+1]==0){
+			//System.out.println("here" +(i+1));
+			isPossible(i+1);			
+		}
+		if (i-1>=0 && A[i-1]==0){
+			//System.out.println("here1");
+			isPossible(i-1);
+		}
+		if(i+m < n && A[i+m]==0){
+			//System.out.println("here2");
+			isPossible(i+m);
+		}
 	}
 }
