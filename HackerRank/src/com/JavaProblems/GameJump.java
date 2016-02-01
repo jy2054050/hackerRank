@@ -21,11 +21,8 @@ public class GameJump {
 			m = sc.nextInt();
 			for (int n_i = 0; n_i < n; n_i++) {
 				A[n_i]= sc.nextInt();
-				//System.out.println("ele : i"+ n_i +" value is: " + A[n_i]);
-			}
-			//System.out.println("going");
+				}
 			int temp =0;
-			//System.out.println(temp);
 			result=false;
 			isPossible(temp);
 			if(result) System.out.println("YES");
@@ -34,31 +31,23 @@ public class GameJump {
 
 	}
 	private static void isPossible( int i) {
-		//System.out.println("i : "+i + " Array visited : "+ Arrays.toString(visitedArray));
-
-		//System.out.println(i);
 		if(i>n || i+m >= n || i==n-1){
 			result =true;
 			return; 
 		}
 		if(visitedArray[i] == true){
-			//System.out.println("visited true " +i);
 			return;
 		}
 		visitedArray[i]= true;
 
-		
 		if (i+1 < n && A[i+1]==0){
-			//System.out.println("here" +(i+1));
-			isPossible(i+1);			
+		isPossible(i+1);			
 		}
 		if (i-1>=0 && A[i-1]==0){
-			//System.out.println("here1");
-			isPossible(i-1);
+		isPossible(i-1);
 		}
 		if(i+m < n && A[i+m]==0){
-			//System.out.println("here2");
-			isPossible(i+m);
+		isPossible(i+m);
 		}
 	}
 }
