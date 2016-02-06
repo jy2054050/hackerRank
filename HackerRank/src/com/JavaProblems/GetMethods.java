@@ -9,8 +9,8 @@ import com.JavaProblems.Student;
 public class GetMethods {
 
 	public static void main(String[] args) {
-		         Class c = Student.getClass();
-	            Method[] methods = c.getDeclaredMethods();
+		       ////  Class c = Student.getClass();
+	           // Method[] methods = c.getDeclaredMethods();
 
 	            ArrayList<String> methodList = new ArrayList<>();
 	           // for(~~~Complete this line~~~){
@@ -22,6 +22,6 @@ public class GetMethods {
 	            }
 	        }
 
-	    }
-	}
+	   // }
+	//}
 }
