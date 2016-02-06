@@ -16,7 +16,5 @@ public class InorderTraversal {
 			if(root.left !=null) Inorder(root.left);
 			System.out.print(root.data+" ");
 			if(root.right !=null) Inorder(root.right);
-			
-		
-	}
+		}
 }
