@@ -16,12 +16,13 @@ public class AlternatingCharacters {
 	private static int alternating(String temp) {
 		int counter =0;
 		char cur=temp.charAt(0);
-		int i = 1;
-		for (; i < temp.length()-1;) {
+		
+		for (int i = 1;i < temp.length();) {
 			if (temp.charAt(i)== cur){
 				counter++;
 				i++;
-			}else{
+			}
+			else{
 				cur=temp.charAt(i);
 				i++;
 			}					
