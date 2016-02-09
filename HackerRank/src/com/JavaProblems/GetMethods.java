@@ -12,16 +12,15 @@ public class GetMethods {
 		       ////  Class c = Student.getClass();
 	           // Method[] methods = c.getDeclaredMethods();
 
-	            ArrayList<String> methodList = new ArrayList<>();
+	          //  ArrayList<String> methodList = new ArrayList<>();
 	           // for(~~~Complete this line~~~){
 	         //       methodList.add(~~~Complete this line~~~);
 	          //  }
-	            Collections.sort(methodList);
-	            for(String name: methodList){
-	                System.out.println(name);
+	          //  Collections.sort(methodList);
+	         //   for(String name: methodList){
+	         //       System.out.println(name);
 	            }
 	        }
 
 	   // }
 	//}
-}
