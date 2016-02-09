@@ -4,23 +4,20 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import com.JavaProblems.Student;
-
 public class GetMethods {
 
-	public static void main(String[] args) {
-		       ////  Class c = Student.getClass();
-	           // Method[] methods = c.getDeclaredMethods();
+	 public static void main(String[] args){
+         Class student = Student.class;
+         Method[] methods = student.getDeclaredMethods();
 
-	          //  ArrayList<String> methodList = new ArrayList<>();
-	           // for(~~~Complete this line~~~){
-	         //       methodList.add(~~~Complete this line~~~);
-	          //  }
-	          //  Collections.sort(methodList);
-	         //   for(String name: methodList){
-	         //       System.out.println(name);
-	            }
-	        }
+         ArrayList<String> methodList = new ArrayList();
+         for( Method m : methods){
+             methodList.add( m.getName());
+         }
+         Collections.sort(methodList);
+         for(String name: methodList){
+             System.out.println(name);
+         }
+     }
 
-	   // }
-	//}
+ }
